@@ -96,7 +96,7 @@ export class CartComponent implements OnInit {
     this.postcart.updateCart(updatedcart).subscribe((res: any) => {
       console.log(res);
     });
-  // window.location.reload()
+  window.location.reload()
   }
   ngOnInit() { }
 

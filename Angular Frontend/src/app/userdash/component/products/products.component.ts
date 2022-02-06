@@ -45,6 +45,7 @@ export class ProductsComponent implements OnInit {
           this.postproductservice.postProduct(this.cart).subscribe(data => {
           
           });
+          window.location.reload();
           break;
         }
       }
@@ -62,6 +63,9 @@ export class ProductsComponent implements OnInit {
         });
       }
       console.log(this.cart);
+    }
+    else{
+      alert('Please Log in to Add Products to Cart!')
     }
     window.location.reload();
   }
