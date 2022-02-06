@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="nav">
+  </div>
+  <div class="product group">
+    <div class="col-1-2 product-image">
+      <div class="bg">
+        <img src="{{product.image}}" alt="" style="max-height: 60vh; max-width: 30vw;">
+      </div>
+      <div class="indicator">
+      </div>
+    </div>
+    <div class="col-1-2 product-info">
+      <h1>{{product.title}}</h1>
+      <h2> ${{product.price}} </h2>
+      <form #selectform="ngForm">
+        <div class="select-dropdown">
+          <select name="quantity" ngModel [(ngModel)]="quant">
+            <option value="1">QUANTITY</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <a href="" class="add-btn" (click)="addtocart(selectform,product.productId)">Add To Cart</a>
+      </form>
+      <br>
+      <p style="font-size: 1rem;">{{product.description}}</p>
+    </div>
+  </div>
+</div>

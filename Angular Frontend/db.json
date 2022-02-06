@@ -1,0 +1,38 @@
+{
+  "signup": [
+    {
+      "fname": "Aakar",
+      "lname": "Mutha",
+      "email": "aakar.mutha18@gmail.com",
+      "mnum": "9657539700",
+      "pass": "abcd1234",
+      "role": "seller",
+      "id": 1
+    },
+    {
+      "fname": "Aakar",
+      "lname": "Mutha",
+      "email": "aakar@gmail.com",
+      "mnum": "9657539700",
+      "pass": "abcd1234",
+      "role": "user",
+      "id": 2
+    }
+  ],
+  "AakarMutha": [
+    {
+      "pname": "dell laptop",
+      "pdesc": "laptop",
+      "pprice": 50000,
+      "id": 1,
+      "ipath": "src/assets/products/dell-laptop.jpg"
+    },
+    {
+      "pname": "hp laptop",
+      "pdesc": "laptop",
+      "pprice": 45000,
+      "id": 2,
+      "ipath": "src/assets/products/hp-laptop.jpg"
+    }
+  ]
+}

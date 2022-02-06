@@ -1,0 +1,61 @@
+<div id="root">
+    <div class="container pt-5">
+        <div class="row align-items-stretch">
+            <div class="c-dashboardInfo col-lg-4 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Total Orders </h4>
+                    <span class="hind-font caption-12 c-dashboardInfo__count"> {{totalorders}} </span>
+                </div>
+            </div>
+            <div class="c-dashboardInfo col-lg-4 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Total Orders Shipped</h4>
+                    <span class="hind-font caption-12 c-dashboardInfo__count"> {{totalorders}} </span>
+                    <!-- <span class="hind-font caption-12 c-dashboardInfo__subInfo">Last month: 20</span> -->
+                </div>
+            </div>
+            <div class="c-dashboardInfo col-lg-4 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Total Orders Pending </h4>
+                        <span class="hind-font caption-12 c-dashboardInfo__count"> 0 </span>
+                </div>
+            </div>
+            <!-- <div class="c-dashboardInfo col-lg-3 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Returns Till Date</h4>
+                    <span class="hind-font caption-12 c-dashboardInfo__count">0</span>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<div id="root">
+    <div class="container pt-5">
+        <div class="row align-items-stretch">
+            <div class="c-dashboardInfo col-lg-4 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Total Products Shipped</h4>
+                    <span class="hind-font caption-12 c-dashboardInfo__count"> {{totalordersshipped}} </span>
+                </div>
+            </div>
+            <!-- <div class="c-dashboardInfo col-lg-3 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Total Products in Stock</h4>
+                    <span class="hind-font caption-12 c-dashboardInfo__count"> 50 </span>
+                </div>
+            </div> -->
+            <div class="c-dashboardInfo col-lg-4 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Total Earnings</h4>
+                        <span class="hind-font caption-12 c-dashboardInfo__count">${{totalearnings | number}}</span>
+                </div>
+            </div>
+            <div class="c-dashboardInfo col-lg-4 col-md-6">
+                <div class="wrap">
+                    <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Returns Till Date</h4>
+                    <span class="hind-font caption-12 c-dashboardInfo__count">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="modal-header">
+    <h2 class="modal-title">Edit Product</h2>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col col-md-10 col-lg-10">
+          <form [formGroup]="addproductform" (ngSubmit)="update()">
+            <div class="form-group">
+              <h3 style="margin-bottom: 0px;">Product name</h3>
+              <textarea type="text" rows=2 class="form-control" formControlName="title"
+              [ngModel]='pname'> </textarea>
+            </div>
+            <div style="height: 20px;">
+              <div *ngIf="!title.valid && title.touched">
+                <div [hidden]="!title.errors.required" class="warn-txt float-right">
+                  <h4>Product Title is required.</h4>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <h3 style="margin-bottom: 0px;">Product Description</h3>
+              <textarea rows="5" id="pdesc" type="text" class="form-control" formControlName="description" [(ngModel)]="pdesc"></textarea>
+            </div>
+            <div style="height: 20px;">
+              <div *ngIf="!description.valid && description.touched">
+                <div [hidden]="!description.errors.required" class="warn-txt float-right">
+                  <h4>Product description is required.</h4>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <h3 style="margin-bottom: 0px;">Product price</h3>
+              <input type="text" id="pprice" class="form-control" formControlName="price" [(ngModel)]="pprice">
+            </div>
+            <div style="height: 30px;">
+              <div *ngIf="!price.valid && price.touched">
+                <div [hidden]="!price.errors.required" class="warn-txt float-right">
+                  <h4>Product price is required.</h4>
+                </div>
+              </div>
+            </div>
+            <button id="btnSubmit" type="submit" class="btn btn-success" style="margin-bottom:10px;">Update Product 
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    </div>
+  
+  

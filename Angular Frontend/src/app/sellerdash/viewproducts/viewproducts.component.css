@@ -1,0 +1,52 @@
+.card-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0,0, 0.2);
+    /* border-radius: 0.25rem; */
+
+}
+.item img{
+    width: 64px;
+}
+
+.item {
+    margin: 0px 10px;
+    text-align: center;
+}
+
+
+.card img{
+    min-width: 150px;
+    min-height: 150px;
+    width: 10vw;
+    height: 10vw;
+    
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.card{
+    padding: 20px;
+    margin: 20px;
+    color: #303030 ;
+    border-radius: 2.25rem;
+    min-width: 200px;
+    max-width: 300px;
+    /* width:3vw; */
+}
+
+.card-btn{
+    border-radius: 2.25rem;
+    background-color: #2f619e;
+    border: #2f619e;
+}

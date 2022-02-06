@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-2"></div>
+    <div class="col-lg-6 col-md-8 login-box">
+      <div class="col-lg-12 login-key">
+      </div>
+      <div class="col-lg-12 login-title">
+        SIGN UP FOR ZING
+      </div>
+
+      <div class="col-lg-12 login-form">
+        <div class="col-lg-12 login-form">
+          <form [formGroup]='signupform' (ngSubmit)="onSignup()">
+            <div class="form-group">
+              <label class="form-control-label">FIRST NAME</label>
+              <input type="text" class="form-control" formControlName="fname">
+            </div>
+            <div style="height: 20px;">
+              <div *ngIf="!fname.valid && fname.touched">
+                <div [hidden]="!fname.errors.required" class="warn-txt ">
+                  First Name is required.
+                </div>
+                <div [hidden]="!fname.errors.minlength" class="warn-txt ">
+                  First Name is short.
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <label for="lname" class="form-control-label">LAST NAME</label>
+              <input formControlName="lname" type="text" class="form-control" id="lname">
+            </div>
+            <div style="height: 20px;">
+            <div *ngIf="!lname.valid && lname.touched">
+              <div [hidden]="!lname.errors.required" class="warn-txt ">
+                Last Name is required.
+              </div>
+              <div [hidden]="!lname.errors.pattern" class="warn-txt ">
+                Last Name can only have alphabets.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-control-label">MOBILE NUMBER</label>
+            <input formControlName="mnum" type="text" class="form-control" id="mnum">
+          </div>
+          <div style="height: 20px;">
+          <div *ngIf="!mnum.valid && mnum.touched">
+            <div [hidden]="!mnum.errors.required" class="warn-txt ">
+              Mobile Number is required.
+            </div>
+            <div [hidden]="!mnum.errors.pattern" class="warn-txt ">
+              Mobile Number is not valid.
+            </div>
+          </div>
+        </div>
+            <div class="form-group">
+              <label class="form-control-label">EMAIL</label>
+              <input type="text" class="form-control" formControlName="email">
+            </div>
+            <div style="height: 20px;">
+              <div *ngIf="!email.valid && email.touched" class="">
+                <span [hidden]="!email.errors.required" class="warn-txt">
+                  Email is required.
+                </span>
+                <div [hidden]="!email.errors.email" class="warn-txt ">
+                  Email is not valid.
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-control-label">PASSWORD</label>
+              <input type="password" class="form-control" formControlName="pass">
+            </div>
+            <div style="height: 30px;">
+              <div *ngIf="!pass.valid && pass.touched">
+                <div [hidden]="!pass.errors.required" class="warn-txt ">
+                  Password is required.
+                </div>
+                <div [hidden]="!pass.errors.minlength" class="warn-txt ">
+                  Minimum 6 characters required.
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 loginbttm">
+              <div class="col-lg-6 login-btm login-text">
+                <!-- Error Message -->
+              </div>
+              <div class="login-btm login-button float-left">
+                <button type="submit" class="btn btn-outline-primary" style="margin-right: 10px;">SIGN UP</button>
+                <button type="submit" class="btn btn-outline-primary float-right" routerLink="/login">LOGIN</button>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-2"></div>
+    </div>
+  </div>

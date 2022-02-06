@@ -1,0 +1,49 @@
+<div class="container">
+  <h1 class="text-center m-3">Add Product</h1>
+  <div class="row justify-content-md-center">
+    <div class="col col-md-8 col-lg-6">
+      <form [formGroup]="addproductform" (ngSubmit)="postproduct()">
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="productName">Product name</label>
+          <input type="text" class="form-control" formControlName="title">
+        </div>
+        <div style="height: 20px;">
+          <div *ngIf="!title.valid && title.touched">
+            <div [hidden]="!title.errors.required" class="warn-txt float-right">
+              <h4>Product Name is required.</h4>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="productName">Product Description</label>
+          <input type="text" class="form-control" formControlName="description">
+        </div>
+        <div style="height: 20px;">
+          <div *ngIf="!description.valid && description.touched">
+            <div [hidden]="!description.errors.required" class="warn-txt float-right">
+              <h4>Product Description is required.</h4>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="productPrice">Product price</label>
+          <input type="number" class="form-control" formControlName="price">
+        </div>
+        <div style="height: 20px;">
+          <div *ngIf="!price.valid && price.touched">
+            <div [hidden]="!price.errors.required" class="warn-txt float-right">
+              <h4>Product Price is required.</h4>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="productPrice">Product Image</label>
+          <input type="file" accept="image/jpeg, image/png, image/jpg" class="form-control" 
+          formControlName="image" (change)="onChange($event)">
+        </div>
+        
+        <button id="btnSubmit" type="submit" class="btn btn-success"[disabled]="!addproductform.valid" >Add Product</button>
+      </form>
+    </div>
+  </div>
+</div>

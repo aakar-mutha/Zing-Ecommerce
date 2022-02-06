@@ -1,0 +1,35 @@
+<div class="container" >
+    <div class="row">
+    <ng-container *ngFor="let product of productlist">
+            <div class="card col-md-3">
+                <img src="{{product.image}}" alt="" class="align-center mx-auto">
+                <h3 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch; font-weight: bold;"> {{product.title}} </h3>
+                <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;" > {{product.description}} </p>
+                <p> <strong>Price: </strong>${{product.price}}</p>
+                
+                <!-- <button class="btn btn-primary card-btn" (click)="open(product.image,product.title,product.description,product.price)">Edit</button> -->
+
+                <button class="btn btn-primary card-btn" (click)="open(product.title,product.description,product.price,product.productId)">Edit</button>
+                <button class="btn btn-primary card-btn" (click)="deleteprod(product.productId)" style="margin-top:20px ;">Delete </button>
+            </div>
+        </ng-container>
+        </div>
+</div>
+
+<div class="container" [hidden]="!noprodsfound" 
+style="
+    height: calc(80vh);
+    width: 80vw;
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: lightgray;" >
+ 
+    <p>No Products Found.</p>
+</div>

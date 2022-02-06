@@ -1,0 +1,54 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <button mat-button routerLink="/userdash" >
+        <mat-icon>store_mall_directory</mat-icon>
+        <span style="margin-left: 10px; font-size: 1.5rem;">ZING</span>
+    </button>
+    <button mat-icon-button class="d-inlne-block me-0 ms-auto " *ngIf="state == true" (click)="checklogin()" style="padding-right: 85px;" >
+        <mat-icon>login</mat-icon>
+        <span style="margin-left: 10px; font-size: 1.25rem;">Login</span>
+    </button>
+    
+    <button mat-icon-button class="d-block me-0 ms-auto" *ngIf="state == false" (click)="signout()" style="padding-right: 95px;">
+        <mat-icon>logout</mat-icon>
+        <span style="margin-left: 10px; font-size: 1.25rem;">Logout</span>
+    </button>
+    
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+        <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" [hidden]="state">
+
+        <h4 class="name" [hidden]="state">{{name}}</h4>
+        <!-- <p class="designation"> {{role}} </p> -->
+
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button"  routerLink="/userdash">
+            <mat-icon>home</mat-icon>
+            <span> Home</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="cart">
+            <mat-icon>shopping_cart</mat-icon>
+            <span> Cart   [ {{count}} ]</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/sellerdash" [hidden]="!seller">
+            <mat-icon>how_to_reg</mat-icon>
+            <span> Seller Home</span>
+        </button>
+        <mat-divider></mat-divider>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
